@@ -5,9 +5,11 @@
 }
 
 body {
-  font-family: Century gothic;
+  font-family: "Century Gothic";
   line-height: 1.6;
-  font-size: 18px;
+  font-size: 23px;
+  overflow-x: hidden;
+  padding:0 20px;
 }
 
 .container {
@@ -15,18 +17,18 @@ body {
   max-width: 1200px;
   margin: auto;  
 }
-.about-container{
+ .about-container{
   display:flex;
   justify-content:space-between;
   align-items:center;
   width: 90%;
   max-width: 1200px;
   margin: auto;
-}
+} 
 
 header {
-  background: #100587;
-  color: white;
+  background: rgb(207, 144, 27);/* #091d3f*/
+  color: #5E5E5E;
   padding: 1rem 0;
   position:sticky;
   top:0;
@@ -40,7 +42,7 @@ header {
 }
 
 .nav a {
-  color: white;
+  color: rgb(1, 17, 30);
   margin-left: 20px;
   text-decoration: none;
 }
@@ -50,39 +52,45 @@ header {
 }
 
 .hero {
-  background-image:url("https://images.pexels.com/photos/5846148/pexels-photo-5846148.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-image:url("https://images.pexels.com/photos/3970339/pexels-photo-3970339.jpeg?auto=compress&cs=tinysrgb&w=600"); 
   color: #fff;
+ background-size: cover;
+  background-position: center;
+  /* height: 100vh;  */
+  background-repeat: no-repeat; 
   padding: 80px 0;
   text-align: center;
+  margin-top:0;
 }
+
 
 .hero .btn {
   display: inline-block;
   margin-top: 20px;
-  background: #100587;
+  background: #091d3f;
   color: white;
+  border-radius: 5px;
   padding: 10px 20px;
   text-decoration: none;
 }
-
-.section {
-  padding: 60px 0;
+.hero .btn:hover {
+  background: #4d3ff0;
 }
 
-.section h3 {
+ .section h3 {
   text-align: center;
   margin-bottom: 40px;
   font-size: 28px;
-}
+} 
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
+.cards,.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
-  justify-content: center;
+  border-collapse: #7d9edb;
 }
 
-.card {
+.card ,.testimonial-card{
   flex: 1 1 250px;
   padding: 20px;
   border: 1px solid #ccc;
@@ -90,14 +98,21 @@ header {
   background: white;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
 }
-.card img {
+
+.card img, .hero img {
   max-width: 100%;
   height: auto;
   border-radius: 5px;
 }
-
-.light {
-  background: #f9f9f9;
+.about-image img {
+  width: 400px;
+  height: 400px;
+  display: block;
+  object-fit: cover;
+}
+.testimonials h3{
+  position: absolute;
+  top:5px;
 }
 
 form {
@@ -116,7 +131,7 @@ form textarea {
 }
 
 form button {
-  background:#100587;
+  background:#091d3f;
   color: white;
   padding: 10px;
   border: none;
@@ -133,46 +148,8 @@ form button:hover {
 }
 
 footer {
-  background: #100587;
+  background:#091d3f;
   color: white;
   text-align: center;
   padding: 15px;
 }
-/* @media (max-width: 1200px) {
-  .container {
-    width: 95%;
-  }
-  body{
-    font-size: 20px;
-  }
-}
-@media (max-width: 992px) {
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-  .card {
-    width: 100%;
-  }
-}
-@media (max-width: 768px) {
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-  .card {
-    width: 100%;
-  }
-  .hero {
-    padding: 40px 0;
-  }
-  
-} */
